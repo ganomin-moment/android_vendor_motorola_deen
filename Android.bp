@@ -20,6 +20,21 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+        name: "libgui_vendor",
+        owner: "motorola",
+        strip: {
+                none: true,
+        },
+        target: {
+                android_arm: {
+                        srcs: ["proprietary/vendor/lib/libgui_vendor.so"],
+                },
+        },
+        prefer: true,
+        soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libdsi_netctrl",
 	owner: "motorola",
 	strip: {
